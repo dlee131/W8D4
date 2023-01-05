@@ -2,9 +2,9 @@ class Clock {
     constructor() {
         const timeNow = new Date () 
 
-        this.hours = timeNow.prototype.getHours() 
-        this.minutes = timeNow.prototype.getMinutes()
-        this.seconds = timeNow.prototype.getSeconds()
+        this.hours = timeNow.getHours() 
+        this.minutes = timeNow.getMinutes()
+        this.seconds = timeNow.getSeconds()
 
         printTime();
 
@@ -25,4 +25,22 @@ class Clock {
         this.seconds = 0;
       }
     }
-      
+      minutes() {
+        this.minutes += 1;
+      if (this.minutes === 60) {
+        this.minutes = 0;
+      }
+    }
+      hours() {
+        this.hour += 1;
+      if (this.hour === 12) {
+        this.hour = 0;
+      }
+      }  
+    }
+    
+}
+const clock = new Clock();
+
+  
+
