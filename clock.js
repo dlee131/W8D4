@@ -8,7 +8,7 @@ class Clock {
 
         printTime();
 
-        setInterval()
+        setInterval(this._tick.bind, 1000)
     }
 
         printTime() {
@@ -18,4 +18,11 @@ class Clock {
                 console.log(printedTime)
     }
 
-    
+    _tick() {
+      seconds(){
+      this.seconds += 1;
+      if (this.seconds === 60) {
+        this.seconds = 0;
+      }
+    }
+      
