@@ -6,20 +6,16 @@ class Clock {
         this.minutes = timeNow.prototype.getMinutes()
         this.seconds = timeNow.prototype.getSeconds()
 
-        printTime() 
+        printTime();
 
-        setTimeout
+        setInterval()
     }
 
         printTime() {
             
+            const printedTime = [this.hours, this.minutes, this.seconds].join(":");
 
+                console.log(printedTime)
     }
 
-    _tick() {
-
-    }
-
-}
-
-const clock = new Clock();
+    
